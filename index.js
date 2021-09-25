@@ -1,5 +1,11 @@
 const button = document.querySelector('button');
 
-button.addEventListener('click', () =>{
-    const response = fetch('https://api.instagram.com/oauth/authorize?client_id=1043459259742712&redirect_uri=https://burmatov-step.github.io/instaDown/&scope=user_profile,user_media&response_type=code')
+const token = "IGQVJYaF9DeEppcy1MVnVrbkFBalBkSWJxeHhyU0kzcU9oYXJrQV93SGlSNEVYaUNrMHowbkVGeTBJZAHlIN1lRREd0eEw1cXhkSU93eWN3b0ozaVZAMMHQ2TUtFSGVKaTlFTHpqYWxzX2tvMVFKZAzUxWEdIM24zMUM0RmN3"
+const userId = 17841402188388178
+const id = 6116972978377283
+button.addEventListener('click', async() =>{
+    const response = await fetch(`https://graph.instagram.com/me/media?fields=id,caption&access_token=${token}`)
+    console.log(response)
 })
+
+
