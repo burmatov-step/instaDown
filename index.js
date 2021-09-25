@@ -4,7 +4,7 @@ const token = "IGQVJYaF9DeEppcy1MVnVrbkFBalBkSWJxeHhyU0kzcU9oYXJrQV93SGlSNEVYaUN
 const userId = 17841402188388178
 const id = 6116972978377283
 button.addEventListener('click', async() =>{
-    const response = await fetch(`https://graph.instagram.com/me/media?fields=id,caption&access_token=${token}`)
+    const response = await fetch(`https://graph.instagram.com/17927601022806581?fields=id,media_type,media_url,username,timestamp&access_token=${token}`)
     const json  = await response.json()
     console.log(json)
 })
